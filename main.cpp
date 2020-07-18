@@ -283,7 +283,7 @@ void EX(IDEX& ins, EXMEM& tar) {
 		memset(&ifid, 0, sizeof ifid);*/
 	}
 	tar.rs2 = ins.rs2;
-	tar.time = 1;
+	tar.time = 3;
 	tar.text = ins.text;
 
 	memset(&ins, 0, sizeof ins);
