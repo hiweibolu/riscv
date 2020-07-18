@@ -13,7 +13,7 @@ struct predictor {
 		state[0] = state[1] = 0;
 	}
 	void print() {
-		printf("%d/%d %lf%%\n", win, tot, win * 1.0 / tot * 1e2);
+		printf("%d %d %lf%%\n", win, tot, win * 1.0 / tot * 1e2);
 	}
 	bool predict() {
 		return state[1];
@@ -27,7 +27,7 @@ struct predictor {
 		}
 		else {
 			if (state[0] == state[1]) {
-				state[1] ^= true;
+				state[0] ^= true;
 			}
 			else {
 				bool x = state[0];
