@@ -16,6 +16,7 @@ struct predictor {
 		printf("%d %d %lf%%\n", win, tot, win * 1.0 / tot * 1e2);
 	}
 	bool predict() {
+		if (tot>100 && win*1.0/tot<0.48) return tot&1;
 		return state[1];
 		//return 0;
 	}
